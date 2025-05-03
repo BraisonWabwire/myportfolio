@@ -1,3 +1,35 @@
+# 🧑‍💻 My Portfolio Website
+
+This is a personal portfolio website built using **React.js**. It showcases my projects, skills, and a little about me. The website is designed to be responsive, clean, and easy to navigate.
+
+## 🚀 Features
+
+- Responsive navigation bar with mobile menu
+- Hero section with introduction
+- Separate "About Me" page using React Router
+- Clean and modern UI using CSS
+
+## 🛠 Tech Stack
+
+- React.js
+- React Router DOM
+- CSS3
+- HTML5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,148 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
 /* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px 20px;
-    background: linear-gradient(90deg, #1a1a3d 0%, #2a4066 100%);
-    position: fixed;
-    width: 98%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    font-family: "Cal Sans", sans-serif;
-    letter-spacing: 1.5px;
-    font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background: linear-gradient(90deg, #1a1a3d 0%, #2a4066 100%);
+  position: fixed;
+  width: 98%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 100;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: #4ecdc4;
+  transform: translateY(-2px);
+}
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-around; /* Evenly space logo and hamburger */
+    padding: 20px 10px; /* Reduced side padding for balance */
   }
-  
-  /* Logo Styling */
-  .navbar-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .navbar-logo:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Navbar Links */
-  .navbar-links {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .navbar-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 100;
-    position: relative;
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    transition: width 0.3s ease;
-  }
-  
-  .navbar-links a:hover::after {
-    width: 100%;
-  }
-  
-  .navbar-links a:hover {
-    color: #4ecdc4;
-    transform: translateY(-2px);
-  }
-  
-  /* Menu Toggle (Hamburger) */
+
   .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-  }
-  
-  .bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    height: 3px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .menu-toggle.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .menu-toggle.open .bar:nth-child(2) {
+    background: linear-gradient(180deg, #1a1a3d 0%, #2a4066 100%);
+    flex-direction: column;
+    justify-content: space-evenly; /* From previous request */
+    align-items: center;
+    padding: 2rem 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
     opacity: 0;
+    transition: all 0.3s ease;
+    min-height: 300px; /* From previous request */
   }
-  
-  .menu-toggle.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+
+  .navbar-links.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
-    }
-  
-    .navbar-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(180deg, #1a1a3d 0%, #2a4066 100%);
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 0;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-      transform: translateY(-10px);
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-      transform: translateY(0);
-      opacity: 1;
-    }
-  
-    .navbar-links a {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-    }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+    margin: 1rem 0; /* From previous request */
+    padding: 0.8rem 0;
   }
-  
-  @media (max-width: 480px) {
-    .navbar {
-      padding: 1rem 3%;
-    }
-  
-    .navbar-logo {
-      font-size: 1.5rem;
-    }
-  
-    .navbar-links a {
-      font-size: 1rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 0.5rem;
   }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links a {
+    font-size: 1rem;
+  }
+}

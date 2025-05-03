@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css'; // Import the CSS file for styling
 import myProfile from '../assets/profile.jpg'; // Import your profile image
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 
 const About = () => {
@@ -27,9 +28,7 @@ const About = () => {
             <p>
               When I'm not coding, you can find me listening to music or scrolling on X, I also love basketball . Let's connect and create something amazing together!
             </p>
-            <a href="#contact" className="cta-button">
-              Get in Touch
-            </a>
+            <Link to="/contact" className="cta-button">Get in Touch</Link>
           </div>
         </div>
       </div>

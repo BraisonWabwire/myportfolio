@@ -16,6 +16,8 @@ This is a personal portfolio website built using **React.js**. It showcases my p
 - CSS3
 - HTML5
 
+![Portfolio Screenshot](src/assets/portfolio.png)
+
 
 
 

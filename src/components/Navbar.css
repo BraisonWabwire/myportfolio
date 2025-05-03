@@ -4,10 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
+    padding:20px 20px;
     background: linear-gradient(90deg, #1a1a3d 0%, #2a4066 100%);
     position: fixed;
-    width: 100%;
+    width: 98%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -43,7 +43,7 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 100;
     position: relative;
     padding: 0.5rem 0;
     transition: all 0.3s ease;

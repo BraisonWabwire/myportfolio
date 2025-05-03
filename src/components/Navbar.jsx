@@ -1,4 +1,5 @@
 import React from 'react'
+import './Navbar.css'; // Import the CSS file for styling
 
 function Navbar() {
 

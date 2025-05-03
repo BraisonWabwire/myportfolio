@@ -1,9 +1,16 @@
 import './App.css';
+import About from './components/About';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to creating a portfolio</h1>
+      <Navbar></Navbar>
+      <main>
+      <Hero></Hero>
+      <About></About>
+      </main>
     </div>
   );
 }

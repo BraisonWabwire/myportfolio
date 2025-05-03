@@ -2,10 +2,11 @@
 .about-section {
     padding: 6rem 5%;
     background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   /* Container for Content */

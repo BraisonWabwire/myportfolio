@@ -1,5 +1,7 @@
 import React from 'react'
 import './Navbar.css'; // Import the CSS file for styling
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 function Navbar() {
 
@@ -10,8 +12,8 @@ function Navbar() {
       <div className="navbar-logo">MyPortfolio</div>
 
       <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
